@@ -20,5 +20,5 @@ for index in range(1,len(sys.argv)):
 			for root, dirs, files in os.walk(join(target_dir,f)):
 				for name in files:
 					filesize+=getsize(join(root,name))
-			print(join(target_dir,f),':',filesize/1024/1024,'M')
+		print('%s:%.1fMByte'%(join(target_dir,f),filesize/1024/1024))
 print('***********************************')	
